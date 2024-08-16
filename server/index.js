@@ -11,11 +11,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({
-    message: "Welcome To MERN CI/CD Pipeline with Github Actions",
+    message: "Welcome To MERN CI/CD Pipeline with Github Actions, Hello From API",
   });
 });
+
 
 const port = process.env.PORT || 5000;
 

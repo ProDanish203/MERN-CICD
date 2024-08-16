@@ -56,6 +56,8 @@ jobs:
                 rsync -avz --delete-after --quiet client/ $SSH_USERNAME@$SSH_HOST:~/MERN-CICD/client/
                 rsync -avz --delete-after --quiet server/ $SSH_USERNAME@$SSH_HOST:~/MERN-CICD/server/
                 ssh $SSH_USERNAME@$SSH_HOST '
+                    export NVM_DIR="$HOME/.nvm" &&
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" &&
                     cd ~/MERN-CICD/client &&
                     npm install &&
                     npm run build &&

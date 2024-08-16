@@ -13,10 +13,12 @@ app.use(morgan("dev"));
 
 app.get("/api", (req, res) => {
   res.json({
-    message: "Welcome To MERN CI/CD Pipeline with Github Actions, Hello From API",
+    message:
+      "Welcome To MERN CI/CD Pipeline with Github Actions, Hello From API",
+    purpose:
+      "This is a simple API to demonstrate CI/CD pipeline with Github Actions for a MERN stack application",
   });
 });
-
 
 const port = process.env.PORT || 5000;
 
